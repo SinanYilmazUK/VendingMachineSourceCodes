@@ -12,7 +12,7 @@ public class VendingMachine {
        Here is the place that I store all method together. First and foremost I had started by creating
        global variables to use them within different method at the same time.
        These variable are actually same with object's variables. Because after finding out with product is selected
-       by customer we are going to assign product object's infos inside these global variables.
+       by customer we are going to assign product object's info inside these global variables.
      */
 
     public static int currentTotalPrice;
@@ -22,11 +22,11 @@ public class VendingMachine {
     Scanner scan = new Scanner(System.in);
 
     /**
-        Here we have created a 'List' which stores 'Product' class's object inside itself.
+        Here I have created a 'List' which stores 'Product' class's object inside itself.
         After creating product object from 'Product class' , we will add inside this list inside the
         VendingMachine constructor.
 
-        Because whenever we need product infos to compared with selected item we will call this 'products' List
+        Because whenever I need product infos to compared with selected item I will call this 'products' List
         to take same infos.
     */
     private List<Product> products = new ArrayList<>();
@@ -105,7 +105,7 @@ public class VendingMachine {
             /**
                -After the insertion messages as below are shown and gives option to stop inserting coins or
                continue to insert coins.
-               -In case of stop topping up coins 'flag' variable turn to 'false' to stop while loop
+               -In case of stop topping up coins 'flag' turn to 'false' to stop while loop
              */
 
             System.out.printf("%-20s%-15s", " Stop Insert Coins >>>", " PRESS 0");
@@ -143,7 +143,7 @@ public class VendingMachine {
     /**
 
      @throws InterruptedException
-     -When we execute this method ,machine display available products to customer.If one product is sold out
+     -When we execute this method, machine shows available products to customer. If one product is sold out
      it doesn't show run out product.
      */
 
@@ -184,10 +184,10 @@ public class VendingMachine {
       @throws SoldOutException
       @throws InterruptedException
 
-        -Here we start to execute essential part of Vending Machine. After taking code of product from the customer
+        -Here we start to execute essential parts of Vending Machine. After taking product code from the customer
         first we will check this product is available or not.
-        -If the product is available next step is checking customer's balance is sufficient to buy product or not.
-        -If the balanced is not sufficient , we will have to different option. Insert coins or cancel transaction.
+        -If the product is available, next step is checking customer's balance is sufficient to buy a product or not.
+        -If the balanced is not sufficient, we will have different options. Insert coins or cancel transaction.
      */
 
 
@@ -246,7 +246,7 @@ public class VendingMachine {
     /**
      *
      * @throws InterruptedException
-     *  - Here we used this method to VERIFY product to buy or CANCEL product to buy.
+     *  - Here we use this method to VERIFY product to buy or CANCEL product.
      *  and with for loop we calculate how many product we have left.
      *
      */
@@ -284,7 +284,7 @@ public class VendingMachine {
     /**
      *
      * @throws InterruptedException
-     *  - Here we used this method to SELECT a new product to buy or CANCEL product to buy.
+     *  - Here we used this method to SELECT a new product to buy or CANCEL product.
      */
 
         public void cancel () throws InterruptedException {
@@ -309,7 +309,7 @@ public class VendingMachine {
     /**
      *
      * @throws InterruptedException
-     *  - Here we used this method to CALCULATE to remaining change given to customer by Vending Machine to the customer
+     *  - Here we used this method to CALCULATE to remaining change given to customer by Vending Machine
      */
 
         public void CalculatingChanges () throws InterruptedException {
@@ -372,7 +372,7 @@ public class VendingMachine {
         }
 
     /**
-     * AND finally here is resetting all saved variables before and make ready for next buying.
+     * AND finally here is resetting all saved variables before starting next transaction and make ready for next buying.
      */
 
     public void resetVendingMachine() {
